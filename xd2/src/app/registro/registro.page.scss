@@ -1,0 +1,76 @@
+//font-family: 'Caveat', cursive;
+//font-family: 'Pacifico', cursive;
+//font-family: 'Shippori Antique', sans-serif;
+//font-family: 'Source Serif Pro', serif;
+
+*{
+    --ion-color-primary: #fca311;
+    font-family: 'Shippori Antique', sans-serif;
+}
+//titulo superior
+.titulo{
+    color: #fca311;
+}
+.titulo-span{
+    color: #ffffff;
+}
+h1, p{
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    font-style: italic;
+}
+h1{
+    text-decoration: none;
+}
+//formulario
+.input-form{
+    text-transform: lowercase;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-style: italic;
+    box-shadow: 0px 0px 5px 1px #fca311;
+}
+
+.created-by{
+    margin-top: 10px;
+    text-align: center;
+}
+.created-by-group{
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.container-formulario ion-button{
+    font-weight: bold;
+    text-transform: lowercase;
+    text-transform: capitalize;
+}
+.container-formulario ion-button:hover{
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    .input-form{
+        margin: 0px 15px;
+        font-weight: 400;
+    }
+    .titulo{
+        text-align: center;
+    }
+    .container h1 {
+        font-size: 20px;
+    }
+    .item-form{
+        margin: 0px 15px;
+        font-size: 17px;
+    }
+    .container-formulario ion-button{
+        margin: 10px 15px;
+        text-transform: lowercase;
+        text-transform: capitalize;
+    }
+}
+

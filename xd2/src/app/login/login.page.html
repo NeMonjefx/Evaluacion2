@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titulo">Register<span class="span-titulo">App</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-grid>
+      <ion-row >
+        <ion-col >
+          <h1>Bienvenid@ a <span class="titulo">Register</span>App </h1>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+  <div class="form">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item class="item-form">
+            <ion-label position="floating">Nombre de Usuario</ion-label>
+            <ion-input type="text" placeholder="Ingrese su Nombre de Usuario..."></ion-input>
+          </ion-item>
+          <ion-item class="item-form">
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" placeholder="Ingrese su Contraseña..."></ion-input>
+          </ion-item>
+          <ion-button (click)="login()" expand="block" color="primary">Iniciar Sesión</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="recuperar-password">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <a class="olvide-contraseña" href="#">Olvide mi contraseña</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="created-by">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h1 class="created-by-group">App Desarrollada por grupo 10™</h1>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar class="footer-form">
+
+  </ion-toolbar>
+</ion-footer>

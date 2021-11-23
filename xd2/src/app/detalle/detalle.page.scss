@@ -1,0 +1,34 @@
+*{
+    --ion-color-primary: #fca311;
+    font-family: 'Shippori Antique', sans-serif;
+}
+//titulo superior
+.titulo{
+    color: #ffffff;
+}
+.titulo-span{
+    color: #fca311;
+}
+h2{
+    font-style: italic;
+    font-size: 20px;
+    color: #ffffff;
+}
+.input-form{
+    text-transform: lowercase;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-style: italic;
+}
+.label-tipo{
+    text-transform: lowercase;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    h2{
+        font-size: 20px;
+    }
+}

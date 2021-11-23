@@ -1,0 +1,181 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Pacifico&family=Shippori+Antique&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titulo">Register<span class="titulo-span">App</span></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-grid>
+      <ion-row >
+        <ion-col >
+          <h1>Bienvenid@ a <span class="titulo">Register</span>App </h1>
+          <p>Registro de Estudiante</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+
+  <div class="container-formulario">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item class="input-form">
+            <ion-label position="floating">Rut</ion-label>
+            <ion-input  #txtRut placeholder="Ej: 20300400K"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-sm="6">
+          <ion-item class="input-form">
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input #txtNombre placeholder="Ej: Juan Aros"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-sm="6">
+          <ion-item class="input-form">
+            <ion-label position="floating">Nombre de Usuario</ion-label>
+            <ion-input #txtUserName placeholder="Ej: Juanito 24"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item class="input-form">
+            <ion-label position="floating">Apellidos </ion-label>
+            <ion-input #txtApellidos type="text" placeholder="Ej: Morales Lara..."></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-sm="6">
+          <ion-item class="input-form">
+            <ion-label position="floating">Fono (fijo o celular)</ion-label>
+            <ion-input #telFono placeholder="Ej: +56950403020"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-sm="6">
+          <ion-item class="input-form">
+            <ion-label position="floating">Correo Eléctronico</ion-label>
+            <ion-input #txtEmail type="email" placeholder="Ej: Juanito.xd@gmail.com..."></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-sm="6">
+          <ion-item class="input-form">
+            <ion-label position="floating">Dirección</ion-label>
+            <ion-input #txtDireccion type="text" placeholder="Ej: La casa de juan..."></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" size-sm="6">
+          <ion-item class="input-form">
+            <ion-label position="floating">Dirección Suite</ion-label>
+            <ion-input #txtSuite type="text" placeholder="Ej: Juanito suite..."></ion-input>
+          </ion-item>
+        </ion-col>
+        <br>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+  <!-- <div *ngIf="listado.length > 0">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12">
+          <h1>Listado de Estudiantes</h1>
+          <ion-list>
+            <div *ngFor="let aux of listado">
+              <ion-item>
+                <ion-label class="datos-encontrados">{{aux[0].txtNombre}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label class="datos-encontrados">{{aux[0].txtUserName}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label class="datos-encontrados">{{aux[0].txtApellidos}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label class="datos-encontrados">{{aux[0].telFono}}</ion-label>
+              </ion-item>
+            </div>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div> -->
+
+  <div *ngIf="nombre1">
+    <h1>Datos Encontrados</h1>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>{{nombre1}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>{{userName1}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>{{apellidos1}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>{{fono1}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>{{email1}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>{{direccion1}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label>{{suite1}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-button (click)="eliminar()">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="created-by">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h1 class="created-by-group">App Desarrollada por grupo 10™</h1>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="registro(txtRut, txtNombre, txtApellidos, txtEmail, txtDireccion, txtUserName, txtSuite, telFono)" fill="clear">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+    <ion-button (click)="buscar(txtRut)" fill="clear" slot="end" >
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+    <ion-button (click)="listar(txtRut)" fill="clear" slot="" >
+      <ion-icon slot="icon-only" name="list"></ion-icon>
+    </ion-button>
+    <ion-button (click)="limpiar(txtRut, txtNombre, txtFono)" fill="clear" slot="" >
+      <ion-icon slot="icon-only" name="refresh"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
